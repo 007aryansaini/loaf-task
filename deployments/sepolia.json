@@ -1,0 +1,17 @@
+{
+  "network": "sepolia",
+  "timestamp": "2025-10-04T10:21:44.239Z",
+  "deployer": "0x1df86eAcBbCb398BC5bac64C1391D66c7950fA65",
+  "contracts": {
+    "settlementToken": "0x40E301b4b0bE1CdBC6FCed08DA1700e46C7414B6",
+    "marketFactory": "0x19553caEc97562935670Ce90d4310086d7300999",
+    "sampleMarket": "0x9B5d4d163Adbec92Dca543aD1DbfB8E6D106FDB3"
+  },
+  "sampleMarket": {
+    "question": "0x7a6d613d839c13303f415e759e13e14151e5aac3cacb868157616e1777ee91bf",
+    "resolveTimestamp": "1762165278",
+    "initYesPool": "10000000000000000000000",
+    "initNoPool": "10000000000000000000000",
+    "feeBps": 100
+  }
+}
