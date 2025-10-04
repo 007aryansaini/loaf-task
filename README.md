@@ -318,6 +318,53 @@ The contracts are optimized for gas efficiency:
 - **Testnet**: Ethereum Sepolia
 - **Mainnet**: Ethereum Mainnet
 
+## Deployed Contracts (Sepolia Testnet)
+
+The contracts have been deployed to Ethereum Sepolia testnet. You can interact with them directly:
+
+### Contract Addresses
+
+- **SettlementToken**: `0x40E301b4b0bE1CdBC6FCed08DA1700e46C7414B6`
+- **MarketFactory**: `0x19553caEc97562935670Ce90d4310086d7300999`
+- **Sample Market**: `0xa9b5FE7cd5877Ae86232bAa2f68AAc8a3e0a8257`
+
+### Etherscan Links
+
+- **SettlementToken**: [https://sepolia.etherscan.io/address/0x40E301b4b0bE1CdBC6FCed08DA1700e46C7414B6](https://sepolia.etherscan.io/address/0x40E301b4b0bE1CdBC6FCed08DA1700e46C7414B6)
+- **MarketFactory**: [https://sepolia.etherscan.io/address/0x19553caEc97562935670Ce90d4310086d7300999](https://sepolia.etherscan.io/address/0x19553caEc97562935670Ce90d4310086d7300999)
+- **Sample Market**: [https://sepolia.etherscan.io/address/0xa9b5FE7cd5877Ae86232bAa2f68AAc8a3e0a8257](https://sepolia.etherscan.io/address/0xa9b5FE7cd5877Ae86232bAa2f68AAc8a3e0a8257)
+
+### Interacting with Deployed Contracts
+
+You can interact with these contracts using:
+
+1. **Etherscan Interface**: Use the "Contract" tab on Etherscan to read and write to contracts
+2. **Web3 Libraries**: Connect to Sepolia network and use the contract addresses
+3. **Remix IDE**: Import the contracts using their addresses
+4. **Custom Frontend**: Connect your dApp to Sepolia and use these addresses
+
+### Example Usage with Deployed Contracts
+
+```javascript
+// Connect to Sepolia network
+const provider = new ethers.JsonRpcProvider('https://sepolia.infura.io/v3/YOUR_INFURA_KEY');
+
+// Connect to deployed contracts
+const settlementTokenAddress = "0x40E301b4b0bE1CdBC6FCed08DA1700e46C7414B6";
+const marketFactoryAddress = "0x19553caEc97562935670Ce90d4310086d7300999";
+const sampleMarketAddress = "0xa9b5FE7cd5877Ae86232bAa2f68AAc8a3e0a8257";
+
+const settlementToken = new ethers.Contract(settlementTokenAddress, settlementTokenABI, provider);
+const marketFactory = new ethers.Contract(marketFactoryAddress, marketFactoryABI, provider);
+const sampleMarket = new ethers.Contract(sampleMarketAddress, marketABI, provider);
+
+// Check market details
+const question = await sampleMarket.question();
+const state = await sampleMarket.state();
+const yesPool = await sampleMarket.yesPool();
+const noPool = await sampleMarket.noPool();
+```
+
 ## Troubleshooting
 
 ### Common Issues
