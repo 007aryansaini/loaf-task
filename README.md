@@ -124,7 +124,7 @@ When buying NO:
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/007aryansaini/loaf-task.git>
 cd contracts
 npm install
 ```
